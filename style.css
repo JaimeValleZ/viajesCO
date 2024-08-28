@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    font-family: "Poppins", sans-serif
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+
+.header {
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(pexels-daniloarenash-12227830.jpg);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+}
+
+.logo{
+    display: flex; 
+    align-items: center;
+    
+}
+
+.logo img{
+    height: 60px;
+    margin-right: 10px;
+    margin-top: 5px;
+    border-radius: 30px;  
+}
+
+.menu{
+    position: absolute;
+    top:0%;
+    left: 0%;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    color: #FFFDFC;
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.menu .navbar ul li{
+    position: relative;
+    float: left;
+}
+
+.menu .navbar ul li a:hover{
+   color: #44e635;
+}
+
+.menu .navbar ul li a{
+    font-size: 18px;
+    padding: 20px;
+    color: #FFFDFC;
+    display: block;
+    font-weight: 600;
+}
+
+#menu{
+    display: none;
+}
+
+.menu-icono{
+    width: 25px;
+}
+
+.menu label{
+    cursor: pointer;
+    display: none;
+}
+
+.header-content{
+    text-align: center;
+
+}
+
+.header-content h1{
+    font-size: 75px;
+    line-height: 80px;
+    color: #F9FAFC;
+    text-transform: uppercase;
+    margin-bottom: 35px;
+}
+
+.header-content p{
+    font-size: 16px;
+    color: #C5C5C5;
+    padding: 0 250px;
+    margin-bottom: 25px;
+}
+
+.btn-1{
+    display: inline-block;
+    padding: 11px 35px;
+    background-color:#24d917;
+    color:#F9FAFC;
+    text-transform: uppercase;
+}
+
+.btn-1:hover{
+    background-color: #14a30d;
+
+}
+
+.viajes{
+    padding: 100px 0;
+    background-color: #E1E2E6;
+    position: relative;
+}
+
+.viajes-content{
+    text-align: center;
+}
+
+.viajes-content h2{
+    font-size: 55px;
+    line-height: 70px;
+    color: #323337;
+    text-transform: uppercase;
+    padding: 0 250px;
+    margin-bottom: 15px;
+}
+
+.txt-p{
+    font-size: 16px;
+    color: #414247;
+    padding: 0 250px;
+    margin-bottom: 35px;
+}
+
+.caribe-group{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.caribe-1{
+    padding: 0 25px;
+}
+
+.caribe-1 img{
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+}
+
+.caribe-img{
+    position: absolute;
+    top: 0%;
+    right: 0%;
+}
+
+.caribe-1 h3{
+    color: #323337;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.general{
+    display: flex;
+
+}
+
+.general-1{
+    width: 50%;
+    padding: 100px 250px 100px 100px;
+    background-color: whitesmoke;
+}
+
+.general-2{
+    background-image: url(pexels-karelia-blum-11925494-11642163.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50%;
+}
+
+.general-3{
+    background-image: url(pexels-jibarofoto-1559699.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50%;
+}
+
+.general-4{
+    background-image: url("WhatsApp Image 2024-05-24 at 7.37.54 PM.jpeg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50%;
+}
+
+h2{
+    font-size: 55px;
+    line-height: 70px;
+    color: #323337;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+p{
+    font-size: 16px;
+    color: #414247;
+    margin: 25px 0 45px 0;
+}
+
+.footer{
+    padding: 100px 0;
+    background-color: #000000;
+}
+
+.footer-content{
+    display: flex;
+    justify-content: center;
+}
+
+
+.link h3{
+    font-size: 18px;
+    color: white;
+    margin-bottom: 15px;
+    flex-direction: row;
+}
+
+.link p{
+    font-size: 16px;
+    color: White;
+    display: block;
+    margin-bottom: 15px;
+}
+
+@media (max-width:991px){
+
+    .menu{
+        padding: 30px;
+    }
+
+    .menu label{
+        display: initial;
+    }
+
+    .menu .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0%;
+        right: 0%;
+        background-color: #24d917;
+        display: none;
+    }
+
+    .menu .navbar ul li{
+        width: 100%;
+    }
+
+    #menu:checked ~ .navbar{
+        display: initial;
+    }
+
+    .header{
+        min-height: 0vh;
+    }
+
+    .header-content{
+        padding: 100px 30px;
+    }
+
+    .header-content p{
+        padding: 0%;
+    }
+
+    .viajes{
+        padding: 30px;
+    }
+
+    .viajes-content h2{
+        padding: 0%;
+    }
+
+    .txt-p{
+        padding: 0;
+    }
+
+    .caribe-group{
+        flex-direction: column;
+        margin-bottom: 0;
+    }
+
+    .caribe img{
+        display: none;
+    }
+
+    .general{
+        flex-direction: column;
+    }
+
+    .general-1{
+        width: 100%;
+        padding: 30px;
+        text-align: center;
+    }
+
+    .general-2, .general-3, .general-4{
+        display: none
+    }
+
+    .footer{
+        padding: 30px;
+    }
+
+    .footer-content{
+        flex-direction: column;
+        text-align: center;
+    }
+}

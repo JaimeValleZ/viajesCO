@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+small{
+    display: none;
+}
+
+body{
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(pexels-daniloarenash-12227830.jpg);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    min-height: 130vh;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.logo{
+    display: flex; 
+    align-items: center;
+    
+}
+
+.logo img{
+    height: 60px;
+    margin-right: 10px;
+    margin-top: 5px;
+    border-radius: 30px;  
+}
+
+#menu{
+    display: none;
+}
+
+.menu-icono{
+    width: 25px;
+}
+
+.menu label{
+    cursor: pointer;
+    display: none;
+}
+
+.formulario{
+    max-width: 700px;
+    width: 100%;
+    padding: 25px 30px;
+    background-color: white;
+    border-radius: 10px;
+
+}
+
+.formulario h1{
+    text-align:center ;
+    padding: 0 0 20px 0; 
+    font-weight: 600;
+}
+
+.formulario form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 10px 12px 0;
+
+}
+
+form .form-group{
+    margin-bottom:15px ;
+    width: calc(100%/2-20px);
+}
+
+form label{
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+input[type="button"],
+input[type="file"] {
+    width: 20%;
+    padding: 3px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background: #24d917;
+    color: white;
+}
+
+input[type="button"]:hover{
+    background:  #14a30d;
+}
+
+#tablaDatos {
+    margin-top: 5px;
+    margin-bottom: 10px; 
+    padding: 10px; 
+    border: 1px solid #ccc;
+    border-radius: 5px; 
+}
+
+#resultadoBusqueda {
+    margin-top: 5px;
+    margin-bottom: 10px; 
+    padding: 10px; 
+    border: 1px solid #ccc;
+    border-radius: 5px; 
+}
+
+
+
+.form-group input{
+    height: 40px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #69e239;
+    padding-left: 15px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group input:valid{
+    border-color: #24d917;
+}
+
+form .button{
+    width: 100%;
+    height: 30px;
+    margin: 40 px 0;
+}
+
+form .button input{
+    width: 20%;
+    height: 100%;
+    outline: none;
+    cursor: pointer;
+    background: #69e239;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    border-radius: 10px;
+}
+
+form .button input:hover{
+    background:  #14a30d;
+}
+
+.was-validated small{
+    display: block;
+    color: red;
+}
+
+@media(max-width: 991px){
+
+    .body{
+        min-height: 120vh;
+    }
+    .menu{
+        padding: 30px;
+    }
+
+    .menu label{
+        display: initial;
+    }
+
+    .menu .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0%;
+        right: 0%;
+        background-color: #24d917;
+        display: none;
+    }
+
+    .menu .navbar ul li{
+        width: 100%;
+    }
+
+    #menu:checked ~ .navbar{
+        display: initial;
+    }
+
+    .header{
+        min-height: 0vh;
+    }
+
+    .formulario{
+        max-width: 70%;
+    }
+
+    form .form-group{
+        margin-bottom: 15px;
+        width: 100%;
+    }
+
+    .formulario form{
+        max-height: 300px;
+        overflow-y: scroll;
+    }
+
+    .formulario form::-webkit-scrollbar{
+        width: 0;
+    }
+
+    form .button{
+        margin: 20px 0;
+    }
+}

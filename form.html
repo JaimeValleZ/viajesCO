@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulario</title>
+    <link rel="stylesheet" href="styleform.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.8/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <script src="https://www.w3resource.com/javascript/form/email-validation.php"></script>
+
+    <header class="header">
+
+      <div class="menu container">
+        <a href="#" class="logo">
+          <img src="WhatsApp Image 2024-05-24 at 6.59.46 PM.jpeg">
+        </a>
+          <input type="checkbox" id="menu">
+          <label for="menu">
+              <img src="menu.png" class="menu-icono" alt="">
+          </label>
+          <nav class="navbar">
+              <ul id="iniciom">
+                  <li><a href="index.html">Inicio</a></li>
+                  <li><a href="index.html#cartagena">Cartegena</a></li>
+                  <li><a href="index.html#Santa">Santa Marta</a></li>
+                  <li><a href="index.html#Guajira">Guajira</a></li>
+                  <li><a href="form.html">Contactanos</a></li>
+              </ul>
+          </nav>
+      </div>
+
+    </header>
+
+    <div class="formulario">
+    <h1><font color="#44e635">REGISTRO</font></h1>
+    <form id="form-validation" novalidate>
+
+      <div class="form-group">
+        <label for="codigo" >Código:</label>
+        <input type="text" id="codigo" name="codigo" required>
+        <small>Complete este campo</small>
+      </div>
+
+      <div class="form-group">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+        <small>Complete este campo</small>
+      </div>
+
+      <div class="form-group">
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" name="apellido" required>
+        <small>Complete este campo</small>
+      </div>
+
+      <div class="form-group">
+        <label for="fecha">Fecha:</label>
+        <input type="date" id="fecha" name="fecha" required>
+        <small>Complete este campo</small>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Correo:</label>
+        <input type="email" id="email" class="input" required>
+        <small>Complete este campo</small>
+      </div>
+
+      <div class="button">
+      <input type="button" value="Agregar" onclick="agregarDatos()">
+      <input type="button" value="Actualizar" onclick="actualizarDatos()">
+      <input type="button" value="Eliminar" onclick="eliminarDatos()">
+      <input type="button" value="Limpiar" onclick="limpiar()">
+      </div>
+      </form>
+      
+      <div id="tablaDatos"></div>
+      
+      <div>
+        <label for="buscarCodigo">Buscar Código:</label>
+        <input type="text" id="buscarCodigo">
+        <input type="button" value="Buscar" onclick="buscarCodigo()">
+        <div id="resultadoBusqueda"></div>
+      </div>
+      
+      <div>
+        <label for="cargarArchivo">Cargar Excel:</label>
+        <input type="file" id="cargarArchivo" accept=".xlsx">
+        <input type="button" value="Cargar Datos" onclick="cargarDatosDesdeExcel()">
+      </div>
+
+      
+        <input type="button" value="Exportar a Excel" onclick="exportToExcel()" id="exportButton">
+
+    </div>
+
+      <script src="script.js"></script>
+
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var form = document.getElementById("form-validation");
+            var agregarBtn = document.querySelector('input[value="Agregar"]');
+            agregarBtn.addEventListener("click", function (event) {
+                if (!form.checkValidity()) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+                form.classList.add("was-validated");
+            });
+            
+          });
+    </script>
+
+</body>
+</html>
